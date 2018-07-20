@@ -10,8 +10,6 @@ class SearchClientProvider extends BaseSearchClientProvider
 {
     /**
      * @return array
-     *
-     * @throws \Exception
      */
     protected function getClientConfig()
     {

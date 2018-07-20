@@ -10,8 +10,6 @@ class IndexClientProvider extends BaseIndexClientProvider
 {
     /**
      * @return array
-     *
-     * @throws \Exception
      */
     protected function getClientConfig()
     {

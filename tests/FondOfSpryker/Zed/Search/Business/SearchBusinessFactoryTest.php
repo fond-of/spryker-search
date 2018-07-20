@@ -2,9 +2,9 @@
 
 namespace FondOfSpryker\Zed\Search\Business;
 
+use Codeception\Test\Unit;
 use FondOfSpryker\Client\Search\Provider\IndexClientProvider;
 use FondOfSpryker\Client\Search\Provider\SearchClientProvider;
-use Codeception\Test\Unit;
 use ReflectionClass;
 
 class SearchBusinessFactoryTest extends Unit
@@ -24,10 +24,9 @@ class SearchBusinessFactoryTest extends Unit
 
     /**
      * @return void
-     *
-     * @throws \ReflectionException
      */
-    public function testCreateSearchClientProvider() {
+    public function testCreateSearchClientProvider()
+    {
         $reflection = new ReflectionClass(get_class($this->searchBusinessFactory));
 
         $method = $reflection->getMethod('createSearchClientProvider');
@@ -40,10 +39,9 @@ class SearchBusinessFactoryTest extends Unit
 
     /**
      * @return void
-     *
-     * @throws \ReflectionException
      */
-    public function testCreateIndexClientProvider() {
+    public function testCreateIndexClientProvider()
+    {
         $reflection = new ReflectionClass(get_class($this->searchBusinessFactory));
 
         $method = $reflection->getMethod('createIndexProvider');

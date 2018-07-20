@@ -2,9 +2,9 @@
 
 namespace FondOfSpryker\Client\Search;
 
+use Codeception\Test\Unit;
 use FondOfSpryker\Client\Search\Provider\IndexClientProvider;
 use FondOfSpryker\Client\Search\Provider\SearchClientProvider;
-use Codeception\Test\Unit;
 use ReflectionClass;
 
 class SearchFactoryTest extends Unit
@@ -24,10 +24,9 @@ class SearchFactoryTest extends Unit
 
     /**
      * @return void
-     *
-     * @throws \ReflectionException
      */
-    public function testCreateSearchClientProvider() {
+    public function testCreateSearchClientProvider()
+    {
         $reflection = new ReflectionClass(get_class($this->searchFactory));
 
         $method = $reflection->getMethod('createSearchClientProvider');
@@ -40,10 +39,9 @@ class SearchFactoryTest extends Unit
 
     /**
      * @return void
-     *
-     * @throws \ReflectionException
      */
-    public function testCreateIndexClientProvider() {
+    public function testCreateIndexClientProvider()
+    {
         $reflection = new ReflectionClass(get_class($this->searchFactory));
 
         $method = $reflection->getMethod('createIndexClientProvider');

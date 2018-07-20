@@ -38,7 +38,6 @@ class IndexClientProviderTest extends Unit
     {
         Config::getInstance()->init();
 
-
         $reflection = new ReflectionClass(get_class($this->indexClientProvider));
 
         $method = $reflection->getMethod('getClientConfig');
