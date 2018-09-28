@@ -23,3 +23,8 @@ if (!defined('APPLICATION_ROOT_DIR')) {
     $x = vfsStream::setup('root');
     define('APPLICATION_ROOT_DIR', $x->url());
 }
+
+if (!defined('APPLICATION_SOURCE_DIR')) {
+    $x->addChild(vfsStream::setup('src'));
+    define('APPLICATION_SOURCE_DIR', $x->url() . '/src');
+}
