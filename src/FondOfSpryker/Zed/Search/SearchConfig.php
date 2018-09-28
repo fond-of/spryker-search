@@ -12,7 +12,11 @@ class SearchConfig extends SprykerSearchConfig
     public function getJsonIndexDefinitionDirectories()
     {
         $directories = parent::getJsonIndexDefinitionDirectories();
-        $directories[] = APPLICATION_ROOT_DIR . '/vendor/fond-of-spryker/*/src/*/Shared/*/IndexMap/';
+
+        $fondOfSprykerSharedGlobPattern = APPLICATION_ROOT_DIR . '/vendor/fond-of-spryker/*/src/*/Shared/*/IndexMap/';
+        if (glob($fondOfSprykerSharedGlobPattern)) {
+            $directories[] = $fondOfSprykerSharedGlobPattern;
+        }
 
         return $directories;
     }
