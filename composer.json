@@ -13,8 +13,8 @@
     }
   ],
   "require": {
-    "php": ">=7.1",
-    "spryker/search": "^8.8.1"
+    "php": ">=7.2",
+    "spryker/search": "^8.11.1"
   },
   "require-dev": {
     "spryker/code-sniffer": "^0.14.7",
