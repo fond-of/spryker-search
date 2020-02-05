@@ -14,7 +14,7 @@ class SearchBusinessFactory extends BaseSearchBusinessFactory
     /**
      * @return \FondOfSpryker\Client\Search\Provider\IndexClientProvider
      */
-    protected function createIndexProvider()
+    public function createIndexProvider()
     {
         return new IndexClientProvider();
     }
@@ -22,7 +22,7 @@ class SearchBusinessFactory extends BaseSearchBusinessFactory
     /**
      * @return \FondOfSpryker\Client\Search\Provider\SearchClientProvider
      */
-    protected function createSearchClientProvider()
+    public function createSearchClientProvider()
     {
         return new SearchClientProvider();
     }
