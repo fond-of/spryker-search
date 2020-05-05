@@ -9,7 +9,7 @@ class SearchConfig extends SprykerSearchConfig
     /**
      * @return array
      */
-    public function getJsonIndexDefinitionDirectories()
+    public function getJsonIndexDefinitionDirectories(): array
     {
         $directories = parent::getJsonIndexDefinitionDirectories();
 
