@@ -7,24 +7,25 @@ use Codeception\Test\Unit;
 class SearchConfigTest extends Unit
 {
     /**
-     * @var \FondOfSpryker\Zed\Search\SearchConfig
+     * @var \PHPUnit\Framework\MockObject\MockObject|\FondOfSpryker\Zed\Search\SearchConfig
      */
     protected $searchConfig;
 
     /**
      * @return void
      */
-    protected function _before()
+    protected function _before(): void
     {
-        $this->searchConfig = new SearchConfig();
+        $this->searchConfig = $this->getMockBuilder(SearchConfig::class)
+            ->onlyMethods(['get'])
+            ->getMock();
     }
 
     /**
      * @return void
      */
-    public function testGetJsonIndexDefinitionDirectories()
+    public function testGetJsonIndexDefinitionDirectories(): void
     {
-        // no module in 'fond-of-spryker' namespace exists
         $defaultPaths = $this->searchConfig->getJsonIndexDefinitionDirectories();
         $this->assertNotContains('fond-of-spryker', $defaultPaths);
     }
